@@ -6,219 +6,270 @@
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Build Home - Industrial Theme</title>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 <header class="header">
-    <div class="logo">
-        <img src="" alt="" class="logo__img">
-        <h1 class="logo__heading">Build Home</h1>
-        <span class="logo__sub-heading">Industrial Theme</span>
-    </div>
-    <div class="social">
-        <a href="#" class="social__link">
-            <span class="social__ico icon-facebook"></span></a>
-        <a href="#" class="social__link">
-            <span class="social__ico icon-twitter"></span></a>
-        <a href="#" class="social__link">
-            <span class="social__ico icon-rss"></span></a>
-        <a href="#" class="social__link">
-            <span class="social__ico icon-linkedin"></span></a>
-        <a href="#" class="social__link">
-            <span class="social__ico icon-skype"></span></a>
-    </div>
-    <div class="menu-container">
-        <nav class="main-menu">
-            <a href="#" class="main-menu__link">Home</a>
-            <a href="#" class="main-menu__link">Features</a>
-            <a href="#" class="main-menu__link">Services</a>
-            <a href="#" class="main-menu__link">News</a>
-            <a href="#" class="main-menu__link">Shop</a>
-        </nav>
-        <div class="search">
-            <input type="text" class="search__input" placeholder="Search...">
-            <input type="submit" class="search__submit">
+    <div class="wrapper">
+        <div class="company-container clearfix">
+            <div class="logo">
+                <!--<img src="img/logo.png" alt="Our Awesome Logo" class="logo__img">-->
+                <h1 class="logo__heading">Build Home</h1>
+                <span class="logo__sub-heading">Industrial Theme</span>
+            </div>
+            <div class="social">
+                <a href="#" class="social__link">
+                    <span class="icon-facebook"></span></a>
+                <a href="#" class="social__link">
+                    <span class="icon-twitter"></span></a>
+                <a href="#" class="social__link">
+                    <span class="icon-rss"></span></a>
+                <a href="#" class="social__link">
+                    <span class="icon-linkedin"></span></a>
+                <a href="#" class="social__link">
+                    <span class="icon-skype"></span></a>
+            </div>
+        </div>
+        <div class="menu-container clearfix">
+            <nav class="main-menu">
+                <a href="#" class="main-menu__link main-menu__link--active">Home</a>
+                <a href="#features" class="main-menu__link">Features</a>
+                <a href="#services" class="main-menu__link">Services</a>
+                <a href="#blog" class="main-menu__link">News</a>
+                <a href="#" class="main-menu__link">Shop</a>
+            </nav>
+            <div class="search">
+                <form action="/" method="GET">
+                    <input type="text" class="search__input" placeholder="Search...">
+                    <button type="submit" class="search__submit">
+                        <span class="icon-search"></span>
+                    </button>
+                </form>
+            </div>
         </div>
     </div>
 </header>
 <div class="slider">
-    <img src="img/slider-1.jpg" alt="Our Great Slider" class="slider__img">
-    <img src="" alt="" class="slider__img">
-    <img src="" alt="" class="slider__img">
-    <span class="slider__headline">Build Your Business</span>
-    <div class="slider__nav-bullets"></div>
+    <div class="wrapper">
+        <img src="img/slider-1.jpg" alt="Our Great Slider" class="slider__img">
+        <img src="" alt="" class="slider__img">
+        <img src="" alt="" class="slider__img">
+        <span class="slider__headline">Build Your Business</span>
+        <div class="slider__nav-bullets"></div>
+    </div>
 </div>
-<section class="features">
-    <article class="single-feature">
-        <span class="single-feature__ico icon-coag"></span>
-        <h3 class="single-feature__headline">Power Inside</h3>
-        <p class="single-feature__teaser">
-            Cum sociis natoque penatibus et magnis dis parturient montesmus. Pro vel nibh et elit mollis commodo et nec
-            augueique
-        </p>
-        <a href="#" class="single-feature__link">Read more <span class="icon-arrow-right"></span></a>
-    </article>
-    <article class="single-feature">
-        <span class="single-feature__ico icon-faders"></span>
-        <h3 class="single-feature__headline">New Technologies</h3>
-        <p class="single-feature__teaser">
-            Cum sociis natoque penatibus et magnis dis parturient montesmus. Pro vel nibh et elit mollis commodo et nec
-            augueique
-        </p>
-        <a href="#" class="single-feature__link">Read more <span class="icon-arrow-right"></span></a>
-    </article>
-    <article class="single-feature">
-        <span class="single-feature__ico icon-truck"></span>
-        <h3 class="single-feature__headline">Fast Support</h3>
-        <p class="single-feature__teaser">
-            Cum sociis natoque penatibus et magnis dis parturient montesmus. Pro vel nibh et elit mollis commodo et nec
-            augueique
-        </p>
-        <a href="#" class="single-feature__link">Read more <span class="icon-arrow-right"></span></a>
-    </article>
-</section>
-<section class="services">
-    <h2 class="services__header">Our Services</h2>
-    <ul class="services__items">
-        <li>
-            <a href="#"><img src="img/services-01.jpg" alt="Our great service feature" width="260" height="260"></a>
-            <h4>Schedule Services</h4>
-        </li>
-        <li>
-            <a href="#"><img src="img/services-02.jpg" alt="Our great service feature" width="260" height="260"></a>
-            <h4>Preventive Maintence</h4>
-        </li>
-        <li>
-            <a href="#"><img src="img/services-03.jpg" alt="Our great service feature" width="260" height="260"></a>
-            <h4>Tire &amp; Wheel Services</h4>
-        </li>
-        <li>
-            <a href="#"><img src="img/services-04.jpg" alt="Our great service feature" width="260" height="260"></a>
-            <h4>Repair Services</h4>
-        </li>
-    </ul>
-</section>
-<div class="blog">
-    <div class="news">
-        <h3 class="news__header">Latest News</h3>
-        <article class="news__block">
-            <h4 class="block__header">Advanced Machinery Helps Improve Quality</h4>
-            <p class="block__sub-header">
-                by <a href="#" class="sub-header__author">cmsmasters</a> Comments <a href="#"
-                                                                                     class="sub-header__comments">6</a>
+<section class="features clearfix" id="features">
+    <div class="wrapper">
+        <article class="single-feature">
+            <span class="single-feature__num">01</span>
+            <span class="single-feature__ico icon-coag"></span>
+            <h3 class="single-feature__headline">Power Inside</h3>
+            <p class="single-feature__teaser">
+                Cum sociis natoque penatibus et magnis dis parturient montesmus. Pro vel nibh et elit mollis commodo et
+                nec
+                augueique
             </p>
-            <p class="block__content">Cum sociis natoque penatibus et magnis dis parturient ontesmus. Pro vel nibh et
-                elit mollis commodo et nec augueique Nemo enim ipsam voluptatem quia ptas sit aspernatur samomo enim
-                ipsam voluptatem.</p>
-            <time class="block__time" datetime="2015-01-23">
-                <span class="time__mon">Jan</span>
-                <span class="time__day">23</span></time>
+            <a href="#" class="single-feature__link">Read more <span class="icon-arrow-right"></span></a>
         </article>
-        <article class="news__block">
-            <h4 class="block__header">Powerful Techniques for Advanced Service</h4>
-            <p class="block__sub-header">
-                by <a href="#" class="sub-header__author">cmsmasters</a> Comments <a href="#"
-                                                                                     class="sub-header__comments">3</a>
+        <article class="single-feature">
+            <span class="single-feature__num">02</span>
+            <span class="single-feature__ico icon-faders"></span>
+            <h3 class="single-feature__headline">New Technologies</h3>
+            <p class="single-feature__teaser">
+                Cum sociis natoque penatibus et magnis dis parturient montesmus. Pro vel nibh et elit mollis commodo et
+                nec
+                augueique
             </p>
-            <p class="block__content">Cum sociis natoque penatibus et magnis dis parturient ontesmus. Pro vel nibh et
-                elit mollis commodo et nec augueique Nemo enim ipsam voluptatem quia ptas sit aspernatur samomo enim
-                ipsam voluptatem.</p>
-            <time class="block__time" datetime="2015-01-21">
-                <span class="time__mon">Jan</span>
-                <span class="time__day">21</span></time>
+            <a href="#" class="single-feature__link">Read more <span class="icon-arrow-right"></span></a>
+        </article>
+        <article class="single-feature">
+            <span class="single-feature__num">03</span>
+            <span class="single-feature__ico icon-truck"></span>
+            <h3 class="single-feature__headline">Fast Support</h3>
+            <p class="single-feature__teaser">
+                Cum sociis natoque penatibus et magnis dis parturient montesmus. Pro vel nibh et elit mollis commodo et
+                nec
+                augueique
+            </p>
+            <a href="#" class="single-feature__link">Read more <span class="icon-arrow-right"></span></a>
         </article>
     </div>
-    <aside class="widget">
-        <h3 class="widget__header">Banners Place</h3>
-        <div class="accordion">
-            <h4 class="accordion__header accordion__header--active">Accordion Panel 1</h4>
-            <p class="accordion__content">Cum sociis natoque penatibus et magnis dis parturient mus. Pro vel nibh et
-                elit mollis commodo et nec augueique Nemo enim ipsam voluptatem quia ptas sit aspernatur momo. Cum
-                sociis natoque penatibus et magnis dis parturient ontesmus. Nemo enim ipsam voluptatem quia ptas sit
-                aspernatur</p>
+</section>
+<section class="services" id="services">
+    <div class="wrapper">
+        <h2 class="services__header">Our Services</h2>
+        <ul class="services__items">
+            <li>
+                <a href="#"><img src="img/services-01.jpg" alt="Our great service feature" width="260" height="260"></a>
+                <h4>Schedule Services</h4>
+            </li>
+            <li>
+                <a href="#"><img src="img/services-02.jpg" alt="Our great service feature" width="260" height="260"></a>
+                <h4>Preventive Maintenance</h4>
+            </li>
+            <li>
+                <a href="#"><img src="img/services-03.jpg" alt="Our great service feature" width="260" height="260"></a>
+                <h4>Tire &amp; Wheel Services</h4>
+            </li>
+            <li>
+                <a href="#"><img src="img/services-04.jpg" alt="Our great service feature" width="260" height="260"></a>
+                <h4>Repair Services</h4>
+            </li>
+        </ul>
+    </div>
+</section>
+<div class="blog clearfix" id="blog">
+    <div class="wrapper">
+        <div class="news">
+            <h3 class="news__header">Latest News</h3>
+            <article class="news__block clearfix">
+                <div class="block">
+                    <a href="#"><h4 class="block__header">Advanced Machinery Helps Improve Quality</h4></a>
+                    <p class="block__sub-header">
+                        by <a href="#" class="sub-header__author">cmsmasters</a> Comments (<a href="#"
+                                                                                             class="sub-header__comments">6</a>)
+                    </p>
+                    <p class="block__content">Cum sociis natoque penatibus et magnis dis parturient ontesmus. Pro vel
+                        nibh
+                        et
+                        elit mollis commodo et nec augueique Nemo enim ipsam voluptatem quia ptas sit aspernatur samomo
+                        enim
+                        ipsam voluptatem.</p>
+                </div>
+                <img src="img/news-1.jpg" alt="map" class="block__img">
+                <time class="block__time" datetime="2015-01-23">
+                    <span class="time__mon">Jan</span>
+                    <span class="time__day">23</span></time>
+            </article>
+            <article class="news__block clearfix">
+                <div class="block">
+                    <a href="#"><h4 class="block__header">Powerful Techniques for Advanced Service</h4></a>
+                    <p class="block__sub-header">
+                        by <a href="#" class="sub-header__author">cmsmasters</a> Comments (<a href="#"
+                                                                                             class="sub-header__comments">3</a>)
+                    </p>
+                    <p class="block__content">Cum sociis natoque penatibus et magnis dis parturient ontesmus. Pro vel
+                        nibh
+                        et
+                        elit mollis commodo et nec augueique Nemo enim ipsam voluptatem quia ptas sit aspernatur samomo
+                        enim
+                        ipsam voluptatem.</p>
+                </div>
+                <img src="img/news-2.jpg" alt="engineer" class="block__img">
+                <time class="block__time" datetime="2015-01-21">
+                    <span class="time__mon">Jan</span>
+                    <span class="time__day">21</span></time>
+            </article>
         </div>
-        <div class="accordion">
-            <h4 class="accordion__header">Accordion Panel 2</h4>
-            <p class="accordion__content">Cum sociis natoque penatibus et magnis dis parturient mus. Pro vel nibh et
-                elit mollis commodo et nec augueique Nemo enim ipsam voluptatem quia ptas sit aspernatur momo. Cum
-                sociis natoque penatibus et magnis dis parturient ontesmus. Nemo enim ipsam voluptatem quia ptas sit
-                aspernatur</p>
-        </div>
-        <div class="accordion">
-            <h4 class="accordion__header">Accordion Panel 3</h4>
-            <p class="accordion__content">Cum sociis natoque penatibus et magnis dis parturient mus. Pro vel nibh et
-                elit mollis commodo et nec augueique Nemo enim ipsam voluptatem quia ptas sit aspernatur momo. Cum
-                sociis natoque penatibus et magnis dis parturient ontesmus. Nemo enim ipsam voluptatem quia ptas sit
-                aspernatur</p>
-        </div>
-        <div class="accordion">
-            <h4 class="accordion__header">Accordion Panel 4</h4>
-            <p class="accordion__content">Cum sociis natoque penatibus et magnis dis parturient mus. Pro vel nibh et
-                elit mollis commodo et nec augueique Nemo enim ipsam voluptatem quia ptas sit aspernatur momo. Cum
-                sociis natoque penatibus et magnis dis parturient ontesmus. Nemo enim ipsam voluptatem quia ptas sit
-                aspernatur</p>
-        </div>
-    </aside>
+        <aside class="aside-widget">
+            <h3 class="aside-widget__header">Banners Place</h3>
+            <div class="accordion">
+                <span class="accordion__ico--active icon-minus"></span>
+                <h4 class="accordion__header--active accordion__header--active">Accordion Panel 1</h4>
+                <p class="accordion__content--active">Cum sociis natoque penatibus et magnis dis parturient mus. Pro vel nibh et
+                    elit mollis commodo et nec augueique Nemo enim ipsam voluptatem quia ptas sit aspernatur momo. Cum
+                    sociis natoque penatibus et magnis dis parturient ontesmus. Nemo enim ipsam voluptatem quia ptas sit
+                    aspernatur samomoPro vel nibh et elit mollis commodo et nec augueique Nemo enim ipsam voluptatem
+                    quia ptas sit aspernatur </p>
+            </div>
+            <div class="accordion">
+                <span class="accordion__ico icon-plus"></span>
+                <h4 class="accordion__header">Accordion Panel 2</h4>
+                <p class="accordion__content">Cum sociis natoque penatibus et magnis dis parturient mus. Pro vel nibh et
+                    elit mollis commodo et nec augueique Nemo enim ipsam voluptatem quia ptas sit aspernatur momo. Cum
+                    sociis natoque penatibus et magnis dis parturient ontesmus. Nemo enim ipsam voluptatem quia ptas sit
+                    aspernatur</p>
+            </div>
+            <div class="accordion">
+                <span class="accordion__ico icon-plus"></span>
+                <h4 class="accordion__header">Accordion Panel 3</h4>
+                <p class="accordion__content">Cum sociis natoque penatibus et magnis dis parturient mus. Pro vel nibh et
+                    elit mollis commodo et nec augueique Nemo enim ipsam voluptatem quia ptas sit aspernatur momo. Cum
+                    sociis natoque penatibus et magnis dis parturient ontesmus. Nemo enim ipsam voluptatem quia ptas sit
+                    aspernatur</p>
+            </div>
+            <div class="accordion">
+                <span class="accordion__ico icon-plus"></span>
+                <h4 class="accordion__header">Accordion Panel 4</h4>
+                <p class="accordion__content">Cum sociis natoque penatibus et magnis dis parturient mus. Pro vel nibh et
+                    elit mollis commodo et nec augueique Nemo enim ipsam voluptatem quia ptas sit aspernatur momo. Cum
+                    sociis natoque penatibus et magnis dis parturient ontesmus. Nemo enim ipsam voluptatem quia ptas sit
+                    aspernatur</p>
+            </div>
+        </aside>
+    </div>
 </div>
 <div class="partners">
-    <a href="#" class="partners__item"><img src="img/partners-1.png" alt="partner-1"></a>
-    <a href="#" class="partners__item"><img src="img/partners-2.png" alt="partner-2"></a>
-    <a href="#" class="partners__item"><img src="img/partners-3.png" alt="partner-3"></a>
-    <a href="#" class="partners__item"><img src="img/partners-4.png" alt="partner-4"></a>
-    <a href="#" class="partners__item"><img src="img/partners-5.png" alt="partner-5"></a>
-    <a href="#" class="partners__item"><img src="img/partners-6.png" alt="partner-6"></a>
+    <div class="wrapper">
+        <a href="#" class="partners__item"><img src="img/partners-1.png" alt="partner-1"></a>
+        <a href="#" class="partners__item"><img src="img/partners-2.png" alt="partner-2"></a>
+        <a href="#" class="partners__item"><img src="img/partners-3.png" alt="partner-3"></a>
+        <a href="#" class="partners__item"><img src="img/partners-4.png" alt="partner-4"></a>
+        <a href="#" class="partners__item"><img src="img/partners-5.png" alt="partner-5"></a>
+        <a href="#" class="partners__item"><img src="img/partners-6.png" alt="partner-6"></a>
+    </div>
 </div>
 <footer class="footer">
-    <div class="widgets">
-        <div class="widget__wrapper">
-            <ul class="links-menu">
-                <li class="links-menu__item"><a href="#">Facebook</a></li>
-                <li class="links-menu__item"><a href="#">Flickr</a></li>
-                <li class="links-menu__item"><a href="#">Twitter</a></li>
-                <li class="links-menu__item"><a href="#">Vimeo</a></li>
-            </ul>
-        </div>
-        <div class="widget__wrapper">
-            <ul class="links-menu">
-                <li class="links-menu__item"><a href="#">How to Write a Blog</a></li>
-                <li class="links-menu__item"><a href="#">Create a Blog in 4 Steps</a></li>
-                <li class="links-menu__item"><a href="#">15 Tips to Increase Traffic</a></li>
-                <li class="links-menu__item"><a href="#">20 Blog Post Ideas</a></li>
-            </ul>
-        </div>
-        <div class="widget__wrapper">
-            <ul class="links-menu">
-                <li class="links-menu__item"><a href="#">Blogs Blog</a></li>
-                <li class="links-menu__item"><a href="#">Roll Up Roll Up</a></li>
-                <li class="links-menu__item"><a href="#">Blog Free</a></li>
-                <li class="links-menu__item"><a href="#">Wordpress Blog</a></li>
-            </ul>
-        </div>
-        <div class="widget__wrapper">
-            <ul class="links-menu">
-                <li class="links-menu__item"><a href="#">Agriculture</a></li>
-                <li class="links-menu__item"><a href="#">Harvest</a></li>
-                <li class="links-menu__item"><a href="#">Company news</a></li>
-                <li class="links-menu__item"><a href="#">Investor relations</a></li>
-            </ul>
+    <div class="widgets clearfix">
+        <div class="wrapper">
+            <div class="widget__container">
+                <h4 class="widget__title">Socials</h4>
+                <ul class="links-menu">
+                    <li class="links-menu__item"><a href="#">Facebook</a></li>
+                    <li class="links-menu__item"><a href="#">Flickr</a></li>
+                    <li class="links-menu__item"><a href="#">Twitter</a></li>
+                    <li class="links-menu__item"><a href="#">Vimeo</a></li>
+                </ul>
+            </div>
+            <div class="widget__container">
+                <h4 class="widget__title">Links</h4>
+                <ul class="links-menu">
+                    <li class="links-menu__item"><a href="#">How to Write a Blog</a></li>
+                    <li class="links-menu__item"><a href="#">Create a Blog in 4 Steps</a></li>
+                    <li class="links-menu__item"><a href="#">15 Tips to Increase Traffic</a></li>
+                    <li class="links-menu__item"><a href="#">20 Blog Post Ideas</a></li>
+                </ul>
+            </div>
+            <div class="widget__container">
+                <h4 class="widget__title">Blogroll</h4>
+                <ul class="links-menu">
+                    <li class="links-menu__item"><a href="#">Blogs Blog</a></li>
+                    <li class="links-menu__item"><a href="#">Roll Up Roll Up</a></li>
+                    <li class="links-menu__item"><a href="#">Blog Free</a></li>
+                    <li class="links-menu__item"><a href="#">Wordpress Blog</a></li>
+                </ul>
+            </div>
+            <div class="widget__container">
+                <h4 class="widget__title">About Us</h4>
+                <ul class="links-menu">
+                    <li class="links-menu__item"><a href="#">Agriculture</a></li>
+                    <li class="links-menu__item"><a href="#">Harvest</a></li>
+                    <li class="links-menu__item"><a href="#">Company news</a></li>
+                    <li class="links-menu__item"><a href="#">Investor relations</a></li>
+                </ul>
+            </div>
         </div>
     </div>
-    <div class="contacts">
-        <p class="contacts__address">
-            <span class="contacts__ico icon-location"></span>
-            BuildHomeLtd.  Street Name 123   23 45 Cityname
-        </p>
-        <p class="contacts__phone">
-            <span class="contacts__ico icon-phone"></span>
-            <a href="tel:+123900123456">+123 900 123 456</a>
-        </p>
-        <p class="contacts__email">
-            <span class="contacts__ico icon-email"></span>
-            <a href="mailto:info@buildhome.web">info@buildhome.web</a>
-        </p>
-        <p class="contacts__copy">
-            &copy; 2014 Build Home
-        </p>
+    <div class="contacts clearfix">
+        <div class="wrapper">
+            <p class="contacts__address">
+                <span class="contacts__ico icon-location"></span>
+                BuildHomeLtd. Street Name 123 23 45 Cityname
+            </p>
+            <p class="contacts__phone">
+                <span class="contacts__ico icon-phone"></span>
+                <a href="tel:+123900123456">+123 900 123 456</a>
+            </p>
+            <p class="contacts__email">
+                <span class="contacts__ico icon-email"></span>
+                <a href="mailto:info@buildhome.web">info@buildhome.web</a>
+            </p>
+            <p class="contacts__copy">
+                &copy; 2014 Build Home
+            </p>
+        </div>
     </div>
 </footer>
 </body>
