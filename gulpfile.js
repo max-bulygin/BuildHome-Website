@@ -3,13 +3,13 @@ var gulp = require('gulp'),
     maps = require('gulp-sourcemaps');
 
 gulp.task('compileSass', function () {
-    gulp.src('src/scss/styles.scss')
+    return gulp.src('src/scss/styles.scss')
         .pipe(maps.init())
-        .pipe(sass().on('error', sass.logError()))
+        .pipe(sass())
         .pipe(maps.write('./'))
         .pipe(gulp.dest('src/css/'));
 });
 gulp.task('watch', function () {
     gulp.watch('src/scss/styles.scss', ['compileSass']);
 });
-gulp.task('default', ['build']);
+//gulp.task('default', ['build']);
