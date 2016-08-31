@@ -9,6 +9,9 @@
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"
+            integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 </head>
 <body>
 <header class="header">
@@ -34,11 +37,11 @@
         </div>
         <div class="menu-container clearfix">
             <nav class="main-menu">
-                <a href="#" class="main-menu__link main-menu__link--active">Home</a>
-                <a href="#features" class="main-menu__link">Features</a>
-                <a href="#services" class="main-menu__link">Services</a>
-                <a href="#blog" class="main-menu__link">News</a>
-                <a href="#" class="main-menu__link">Shop</a>
+                <a href="#" class="main-menu__link main-menu__link--active">Home</a><!--
+                --><a href="#features" class="main-menu__link">Features</a><!--
+                --><a href="#services" class="main-menu__link">Services</a><!--
+                --><a href="#blog" class="main-menu__link">News</a><!--
+                --><a href="#" class="main-menu__link">Shop</a>
             </nav>
             <div class="search">
                 <form action="/" method="GET">
@@ -128,8 +131,8 @@
                 <div class="block">
                     <a href="#"><h4 class="block__header">Advanced Machinery Helps Improve Quality</h4></a>
                     <p class="block__sub-header">
-                        by <a href="#" class="sub-header__author">cmsmasters</a> Comments (<a href="#"
-                                                                                             class="sub-header__comments">6</a>)
+                        by <a href="#" class="sub-header__author">cmsmasters</a> &nbsp;Comments (<a href="#"
+                                                                                                    class="sub-header__comments">6</a>)
                     </p>
                     <p class="block__content">Cum sociis natoque penatibus et magnis dis parturient ontesmus. Pro vel
                         nibh
@@ -147,8 +150,8 @@
                 <div class="block">
                     <a href="#"><h4 class="block__header">Powerful Techniques for Advanced Service</h4></a>
                     <p class="block__sub-header">
-                        by <a href="#" class="sub-header__author">cmsmasters</a> Comments (<a href="#"
-                                                                                             class="sub-header__comments">3</a>)
+                        by <a href="#" class="sub-header__author">cmsmasters</a> &nbsp;Comments (<a href="#"
+                                                                                                    class="sub-header__comments">3</a>)
                     </p>
                     <p class="block__content">Cum sociis natoque penatibus et magnis dis parturient ontesmus. Pro vel
                         nibh
@@ -165,38 +168,40 @@
         </div>
         <aside class="aside-widget">
             <h3 class="aside-widget__header">Banners Place</h3>
-            <div class="accordion">
-                <span class="accordion__ico--active icon-minus"></span>
-                <h4 class="accordion__header--active accordion__header--active">Accordion Panel 1</h4>
-                <p class="accordion__content--active">Cum sociis natoque penatibus et magnis dis parturient mus. Pro vel nibh et
+            <div class="accordion" id="accordion">
+                <h4 class="accordion__header">Accordion Panel 1</h4>
+                <p class="accordion__content">Cum sociis natoque penatibus et magnis dis parturient mus. Pro vel
+                    nibh et
                     elit mollis commodo et nec augueique Nemo enim ipsam voluptatem quia ptas sit aspernatur momo. Cum
                     sociis natoque penatibus et magnis dis parturient ontesmus. Nemo enim ipsam voluptatem quia ptas sit
                     aspernatur samomoPro vel nibh et elit mollis commodo et nec augueique Nemo enim ipsam voluptatem
-                    quia ptas sit aspernatur </p>
-            </div>
-            <div class="accordion">
-                <span class="accordion__ico icon-plus"></span>
+                    quia ptas sit aspernatur
+                </p>
                 <h4 class="accordion__header">Accordion Panel 2</h4>
                 <p class="accordion__content">Cum sociis natoque penatibus et magnis dis parturient mus. Pro vel nibh et
-                    elit mollis commodo et nec augueique Nemo enim ipsam voluptatem quia ptas sit aspernatur momo. Cum
-                    sociis natoque penatibus et magnis dis parturient ontesmus. Nemo enim ipsam voluptatem quia ptas sit
-                    aspernatur</p>
-            </div>
-            <div class="accordion">
-                <span class="accordion__ico icon-plus"></span>
+                    elit mollis commodo et nec augueique Nemo enim ipsam voluptatem quia ptas sit aspernatur momo.
+                    Cum
+                    sociis natoque penatibus et magnis dis parturient ontesmus. Nemo enim ipsam voluptatem quia ptas
+                    sit
+                    aspernatur
+                </p>
                 <h4 class="accordion__header">Accordion Panel 3</h4>
-                <p class="accordion__content">Cum sociis natoque penatibus et magnis dis parturient mus. Pro vel nibh et
-                    elit mollis commodo et nec augueique Nemo enim ipsam voluptatem quia ptas sit aspernatur momo. Cum
-                    sociis natoque penatibus et magnis dis parturient ontesmus. Nemo enim ipsam voluptatem quia ptas sit
-                    aspernatur</p>
-            </div>
-            <div class="accordion">
-                <span class="accordion__ico icon-plus"></span>
+                <p class="accordion__content">Cum sociis natoque penatibus et magnis
+                    dis parturient mus. Pro vel nibh et
+                    elit mollis commodo et nec augueique Nemo enim ipsam voluptatem quia ptas sit aspernatur momo.
+                    Cum
+                    sociis natoque penatibus et magnis dis parturient ontesmus. Nemo enim ipsam voluptatem quia ptas
+                    sit
+                    aspernatur
+                </p>
                 <h4 class="accordion__header">Accordion Panel 4</h4>
                 <p class="accordion__content">Cum sociis natoque penatibus et magnis dis parturient mus. Pro vel nibh et
-                    elit mollis commodo et nec augueique Nemo enim ipsam voluptatem quia ptas sit aspernatur momo. Cum
-                    sociis natoque penatibus et magnis dis parturient ontesmus. Nemo enim ipsam voluptatem quia ptas sit
-                    aspernatur</p>
+                    elit mollis commodo et nec augueique Nemo enim ipsam voluptatem quia ptas sit aspernatur momo.
+                    Cum
+                    sociis natoque penatibus et magnis dis parturient ontesmus. Nemo enim ipsam voluptatem quia ptas
+                    sit
+                    aspernatur
+                </p>
             </div>
         </aside>
     </div>
@@ -272,5 +277,12 @@
         </div>
     </div>
 </footer>
+<script>
+    $("#accordion").accordion({
+        header: "h4",
+        animate: 200,
+        heightStyle: 'content'
+    });
+</script>
 </body>
 </html>
