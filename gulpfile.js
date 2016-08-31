@@ -1,9 +1,11 @@
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
-    maps = require('gulp-sourcemaps');
+    maps = require('gulp-sourcemaps'),
+    plumber = require('gulp-plumber');
 
 gulp.task('compileSass', function () {
     return gulp.src('src/scss/styles.scss')
+        .pipe(plumber())
         .pipe(maps.init())
         .pipe(sass())
         .pipe(maps.write('./'))
