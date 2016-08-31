@@ -1,0 +1,25 @@
+@mixin border($side: null, $thickness : 1px, $type : solid, $color: currentColor) {
+  @if $side != null {
+    border-#{$side}: $thickness $type $color;
+  } @else {
+    border: $thickness $type $color;
+  }
+}
+@mixin font($size, $weight) {
+  font: {
+    size: $size;
+    weight: $weight;
+  }
+}
+@mixin time($txt-col, $bg-col, $offset) {
+  top: (12px + $offset);
+  color: $txt-col;
+  background: $bg-col;
+}
+@mixin transition($prop, $duration){
+  -webkit-transition: $prop $duration;
+  -moz-transition: $prop $duration;
+  -ms-transition: $prop $duration;
+  -o-transition: $prop $duration;
+  transition: $prop $duration;
+}
