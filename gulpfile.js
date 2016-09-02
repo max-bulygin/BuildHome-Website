@@ -14,4 +14,4 @@ gulp.task('compileSass', function () {
 gulp.task('watch', function () {
     gulp.watch('src/scss/styles.scss', ['compileSass']);
 });
-//gulp.task('default', ['build']);
+gulp.task('default', ['compileSass']);
