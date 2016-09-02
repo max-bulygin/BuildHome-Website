@@ -1,0 +1,30 @@
+%teasers {
+  @include font(13px, 400);
+  color: $text-content;
+  font-family: $font-tertiary;
+  line-height: 20px;
+}
+
+%time {
+  position: absolute;
+  left: -17px;
+  display: block;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+}
+
+%contacts {
+  @include font(12px, 400);
+  color: $white;
+  opacity: .2;
+  font-family: $font-tertiary;
+  a {
+    font-size: inherit;
+  }
+  @include transition(opacity, 300ms);
+  &:hover {
+    opacity: .8;
+  }
+}

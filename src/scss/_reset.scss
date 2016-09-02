@@ -11,7 +11,7 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+article, aside, details, figcaption, figure, footer, header, menu, nav, section {
   display: block;
 }
 
@@ -48,6 +48,7 @@ q:before, q:after {
 
 a {
   color: inherit;
+  font-size: inherit;
   text-decoration: none;
 }
 
@@ -61,4 +62,8 @@ a {
 
 img {
   max-width: 100%;
+}
+
+* {
+  box-sizing: border-box;
 }

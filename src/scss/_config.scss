@@ -1,28 +1,61 @@
 // fonts
+
+$google-font--primary   : 'Ubuntu', 'Helvetica Neue', Arial, sans-serif;
+$google-font--secondary : 'Ubuntu Condensed', 'Helvetica Neue', Arial, sans-serif;
+$font-tertiary          : 'Arial', 'Helvetica', sans-serif;
+
+//font sizes
+$base-font              : 16px;
+
 // font weights
+$thin                   : 300;
+$normal                 : 400;
+$bold                   : 500;
+
 // base colors
+$blue                   : #248cec;
+$yellow                 : #f4b60d;
+$white                  : #fff;
+$alabaster              : #f7f7f7;
+$silver                 : #ccc;
+$grey                   : #8a8a8a;
+$nevada                 : #6a6c70;
+$shuttle-grey           : #5d6063;
+$abbey                  : #494c4f;
+$tundora                : #434343;
+$tuna                   : #35383c;
+$mine-shaft             : #333;
+$shark                  : #2a2d32;
+$black                  : #191a1d;
 
-$blue         : #248cec;
-$yellow       : #f4b60d;
-$silver       : #ccc;
-$abbey        : #494c4f;
-$tuna         : #35383c;
-$shark        : #2a2d32;
-$black        : #191a1d;
+/*
+ * Color usage
+ */
 
-// color usage
-
-//primary colors
-$company-blue : $blue;
-$company-yellow : $yellow;
+//brand colors
+$brand-primary          : $blue;
+$brand-secondary        : $yellow;
 
 //header
-$social     : $silver;
-$main-menu : $shark;
-$menu-border : $black;
-$search     : $abbey;
+$logo-head              : $tundora;
+$logo-subhead           : $mine-shaft;
+$social                 : $silver;
+$main-menu              : $shark;
+$border                 : $black;
+$search                 : $abbey;
+$search-ico             : $shuttle-grey;
 
-$border-dark  : $black;
-$text-color   : #8a8a8a;
+//features
+$section-headline       : $shark;
+
+//blog section
+$blog-bg                : $alabaster;
+
+//footer
+$foo-link               : $nevada;
+$link-underscore        : $tuna;
+$contacts               : $tuna;
 
 // text
+$text-content           : $grey;
+

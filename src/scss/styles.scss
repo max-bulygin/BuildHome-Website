@@ -1,10 +1,16 @@
-@import "reset";
-@import "glyphter";
-@import "config";
-@import "variables";
+@import 'config';
+@import 'functions';
+@import 'mixins';
+@import 'placeholders';
+@import 'variables';
+@import 'reset';
+@import 'glyphter';
 
 body {
-  font-family: 'Ubuntu', sans-serif;
+  font: {
+    size: $base-font;
+    family: $google-font--primary;
+  }
 }
 
 .wrapper {
@@ -18,22 +24,20 @@ body {
 
 .logo {
   float: left;
+  background: url(../img/logo.png) no-repeat;
 }
 
 .logo__heading {
-  font-size: 30px;
-  font-weight: 500;
+  @include font(30px, $bold);
   line-height: .8;
   color: $logo-head;
   padding-left: 44px;
-  background: url(../img/logo.png) no-repeat;
 }
 
 .logo__sub-heading {
   opacity: .65;
   color: $logo-subhead;
-  font-size: 12px;
-  font-weight: 300;
+  @include font(12px, $thin);
   text-transform: uppercase;
   letter-spacing: 3.5px;
   padding-left: 46px;
@@ -44,6 +48,7 @@ body {
   color: $social;
   margin-top: 13px;
   a {
+    @include transition(color, 300ms);
     margin-left: 13px;
     &:hover {
       color: $brand-primary;
@@ -53,76 +58,111 @@ body {
 
 .menu-container {
   background: $main-menu;
-  margin-bottom: 40px;
+  @include transition(opacity, 500);
 }
+
+//Main menu
 
 .main-menu {
+
   float: left;
-}
 
-.main-menu__link {
-  font-family: 'Ubuntu Condensed', sans-serif;
-  color: #fff;
-  font-size: 14px;
-  text-transform: uppercase;
-  display: inline-block;
-  border-right: 1px solid $border;
-  padding: 20px 40px;
-  &:hover {
-    color: $brand-secondary;
+  &__link {
+    display: inline-block;
+    font: {
+      family: $google-font--secondary;
+      size: em(14px);
+    }
+    color: $white;
+    text-transform: uppercase;
+    @include border(right, $color: $border);
+    @include transition(color, 300ms);
+    padding: em(21px, 14px) em(40px, 14px);
+
+    &:hover {
+      color: $brand-secondary;
+    }
+
+    &--active {
+      background-color: $brand-primary;
+      &:hover {
+        color: $white;
+      }
+    }
   }
-}
-
-.main-menu__link--active {
-  background-color: $brand-primary;
 }
 
 .search {
+
   float: right;
-  margin: 8px;
+  margin: em(8px, 14px);
   position: relative;
-}
 
-.search__input {
-  background: $search;
-  font-size: 12px;
-  border: 1px solid $border;
-  padding: 11px 30px 11px 11px;
-  width: 240px;
-  outline: 0;
-  color: #5d6063;
-  margin: 0;
-}
+  &__input {
+    background: $search;
+    font-size: em(12px);
+    @include border($color: $border);
+    padding: em(11px, 12px);
+    padding-right: em(30px, 12px);
+    width: em(240px, 12px);
+    outline: 0;
+    color: $white;
+    margin: 0;
+  }
 
-.search__submit {
-  background: none;
-  border: 0;
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 100%;
-  line-height: 39px;
-  cursor: pointer;
-  padding-right: 10px;
-  & span {
-    font-size: 14px;
-    color: #5d6063;
+  &__submit {
+    background: none;
+    border: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    line-height: 39px;
+    cursor: pointer;
+    padding-right: 10px;
+    & span {
+      font-size: 14px;
+      color: $search-ico;
+    }
   }
 }
 
-.slider {
+.is-sticky {
+  opacity: .9;
+  z-index: 1000;
   position: relative;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  .menu-container {
+    @include border(bottom, $color: $border);
+  }
 }
 
-.slider__headline {
-  position: absolute;
-  left: 36px;
-  bottom: 40px;
-  font-size: 54px;
-  font-weight: 500;
-  line-height: 52px;
-  color: white;
+//Slider
+
+.slider {
+  margin-top: 40px;
+  //height: 474px;
+  //overflow: hidden;
+
+  //.slide__headline {
+  //  @include font(54px, $bold);
+  //  color: $white;
+  //  line-height: 52px;
+  //  position: absolute;
+  //  left: 36px;
+  //  bottom: 40px;
+  //}
 }
+.owl-item {
+  display: inline-block;
+  width: $content-width;
+  overflow: hidden;
+}
+//Features
 
 .features {
   padding: 70px 0 84px;
@@ -134,94 +174,107 @@ body {
   padding-left: 123px;
   width: 360px;
   margin-right: 40px;
+
   &:last-child {
     margin-right: 0;
   }
-}
 
-.single-feature__num {
-  opacity: 0.1;
-  color: #2a2b2e;
-  font-size: 90px;
-  font-weight: 500;
-  position: absolute;
-  top: -24px;
-  left: -3px;
-  letter-spacing: -3px;
-}
-
-.single-feature__ico {
-  font-size: 30px;
-  color: $brand-secondary;
-}
-
-.single-feature__headline {
-  color: #2a2b2e;
-  font-size: 20px;
-  font-weight: 500;
-  margin-top: 7px;
-  margin-bottom: 18px;
-}
-
-%teasers {
-  color: #8a8a8a;
-  font-family: Arial, sans-serif;
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 20px;
-}
-
-.single-feature__teaser {
-  @extend %teasers;
-  margin-bottom: 14px;
-}
-
-.single-feature__link {
-  position: relative;
-  font-size: 13px;
-  color: #2a2b2e;
-  & span {
-    font-size: 0.7692307692em;
-    margin-left: 4px;
-    color: $brand-primary;
+  &__num {
+    @include font(90px, $bold);
+    color: $section-headline;
+    opacity: 0.1;
+    position: absolute;
+    top: -24px;
+    left: -3px;
+    letter-spacing: -3px;
   }
-  &:hover {
-    color: $brand-primary;
+
+  &__ico {
+    font-size: 30px;
+    color: $brand-secondary;
+  }
+
+  &__headline {
+    @include font(20px, $bold);
+    color: $section-headline;
+    margin-top: 7px;
+    margin-bottom: 18px;
+  }
+
+  &__teaser {
+    @extend %teasers;
+    margin-bottom: 14px;
+  }
+
+  &__link {
+    position: relative;
+    font-size: 13px;
+    color: $section-headline;
+    @include transition(color, 300ms);
     & span {
-      //position: absolute;
-      //transform: translateX(10%);
+      font-size: 0.7692307692em;
+      margin-left: 4px;
+      color: $brand-primary;
+    }
+    &:hover {
+      color: $brand-primary;
     }
   }
 }
 
 .services {
+
   background-color: $main-menu;
-  padding-top: 43px;
+  padding-top: 60px;
   padding-bottom: 67px;
-}
 
-.services__header {
-  color: white;
-  font-size: 24px;
-  font-weight: 500;
-  margin-bottom: 52px;
-}
-
-.services__items {
-  font-size: 0;
-  li {
-    display: inline-block;
-    margin-right: 40px;
-    &:last-child {
-      margin-right: 0;
-    }
-    h4 {
-      margin-top: 27px;
-      color: white;
-      text-align: center;
-    }
+  &__header {
+    @include font(24px, $bold);
+    color: $white;
+    margin-bottom: 42px;
   }
 
+  &__items {
+
+    font-size: 0;
+
+    li {
+      display: inline-block;
+      position: relative;
+      margin-right: 40px;
+      &:last-child {
+        margin-right: 0;
+      }
+
+      h4 {
+        margin-top: 27px;
+        color: $white;
+        text-align: center;
+      }
+
+      a:hover ~ h4 {
+        color: $brand-secondary;
+      }
+
+      a:hover:after {
+        content: '\0048';
+        font: {
+          family: Glyphter;
+          size: 32px;
+        }
+        color: $white;
+        text-align: center;
+        line-height: 260px;
+        background-color: rgba($brand-primary, .8);
+        width: 260px;
+        height: 260px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 100;
+      }
+    }
+  }
 }
 
 .blog {
@@ -240,41 +293,45 @@ body {
   float: left;
   width: 50%;
 }
+
 .aside-widget {
   padding-left: 19px;
 }
 
-.block__img {
-  float: left;
-  width: 26%;
-}
-
 .block {
+
   float: right;
   width: 74%;
   padding: 5px 20px 5px 33px;
+
+  &__img {
+    float: left;
+    width: 26%;
+  }
+
+  &__header {
+    margin-bottom: 3px;
+    @include transition(color, 300ms);
+    &:hover {
+      color: $brand-primary;
+    }
+  }
+
+  &__sub-header {
+    @extend %teasers;
+    margin-bottom: 20px;
+  }
+
+  &__content {
+    @extend %teasers;
+  }
 }
 
 .news__header,
 .aside-widget__header {
-  color: #2a2d32;
-  font-size: 24px;
-  font-weight: 500;
+  @include font(24px, $bold);
+  color: $section-headline;
   margin-bottom: 42px;
-}
-.block__header {
-  margin-bottom: 3px;
-  &:hover {
-    color: $brand-primary;
-  }
-}
-
-.block__sub-header {
-  @extend %teasers;
-  margin-bottom: 20px;
-}
-.block__content {
-  @extend %teasers;
 }
 
 .sub-header__author,
@@ -283,96 +340,82 @@ body {
   color: $brand-primary;
 }
 
-@mixin time($txt-col, $bg-col, $offset) {
-  position: absolute;
-  left: -17px;
-  top: (12px + $offset);
-  display: block;
-  width: 40px;
-  height: 40px;
-  text-align: center;
-  line-height: 40px;
-  color: $txt-col;
-  background: $bg-col;
-}
-
 .time__mon {
-  @include time(#fff, $brand-primary, 0);
+  @extend %time;
+  @include time($white, $brand-primary, 0);
 }
 
 .time__day {
-  @include time(#000, $brand-secondary, 40px);
+  @extend %time;
+  @include time($black, $brand-secondary, 40px);
 }
 
 //ACCORDION
 
 .accordion {
-  position: relative;
-  margin-bottom: 5px;
+
+  &__header {
+    position: relative;
+    @include font(13px, $bold);
+    @include border($color: #e8e8e8);
+    padding: 10px 10px 10px 52px;
+    text-transform: uppercase;
+    background: $white;
+    outline: 0;
+    margin-top: 3px;
+    cursor: pointer;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:after {
+      font: {
+        family: 'Glyphter';
+        size: 11px;
+      }
+      content:'\0048';
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 14px;
+      @include border(right, $color: #e8e8e8);
+    }
+  }
+
+  &__content {
+    @extend %teasers;
+    display: block;
+    padding: 26px 13px 32px 39px;
+  }
 }
-.accordion__header {
-  padding: 12px 12px 12px 52px;
-  text-transform: uppercase;
-  font-size: 13px;
-  font-weight: 500;
-  background: #fff;
-  border: 1px solid #e8e8e8;
-}
-.accordion__ico{
-  display: inline-block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 12px;
-  line-height: 0;
-  font-size: 15px;
-  border-right: 1px solid #e8e8e8;
-}
-.accordion__content {
-  display: none;
-}
-.accordion__header--active {
-  padding: 12px 12px 12px 52px;
-  text-transform: uppercase;
-  color: #fff;
+
+.ui-accordion-header-active {
+  color: $white;
   background: $brand-secondary;
-  font-size: 13px;
-  font-weight: 500;
+  &:after {
+    content:'\0047';
+  }
 }
-.accordion__ico--active {
-  display: inline-block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 12px;
-  line-height: 0;
-  color: #fff;
-  font-size: 15px;
-  border-right: 1px solid white;
-}
-.accordion__content--active {
-  display: block;
-  @extend %teasers;
-  padding: 26px 13px 32px 39px;
-}
+
 .partners {
+
   padding: 86px 0;
   text-align: left;
-    & img {
 
-    }
-}
-.partners__item {
-  margin-right: 42px;
+  &__item {
+    margin-right: 42px;
     &:last-child {
       margin-right: 0;
     }
     & img {
+      @include transition(opacity, 300ms);
       opacity: 0.65;
     }
     & img:hover {
       opacity: 1;
     }
+  }
 }
 
 .widgets {
@@ -381,65 +424,58 @@ body {
   padding-bottom: 70px;
 }
 
-.widget__container {
-  float: left;
-  width: 25%;
-  padding-right: 40px;
+.widget {
+  &__container {
+    float: left;
+    width: 25%;
+    padding-right: 40px;
+  }
+
+  &__title {
+    @include font(16px, $bold);
+    color: $white;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+  }
 }
 
-.widget__title {
-  font-size: 16px;
-  font-weight: 500;
-  color: #fff;
-  text-transform: uppercase;
-  margin-bottom: 32px;
-}
-
-.links-menu {
-
-}
 .links-menu__item {
-  font-family: Arial, sans-serif;
-  font-size: 13px;
-  font-weight: 400;
-  color: #6a6c70;
+  font-family: $font-tertiary;
+  @include font(13px, $normal);
+  color: $foo-link;
   padding: 10px 3px;
-  border-bottom: 1px solid #393c40;
-    &:last-child {
-      border-bottom: none;
-    }
-    & a:hover {
+  @include border(bottom, $color: $link-underscore);
+  &:last-child {
+    border-bottom: none;
+  }
+  a {
+    @include transition(color, 300ms);
+    &:hover {
       color: $brand-primary;
     }
+  }
+
 }
+
 .contacts {
-  background-color: #34373c;
+
+  background-color: $contacts;
   padding: 21px 0;
-}
 
-%contacts {
-  opacity: 0.2;
-  color: white;
-  font-family: Arial, sans-serif;
-  font-size: 12px;
-  font-weight: 400;
-  & a {
-    font-size: inherit;
+  &__ico {
+    vertical-align: text-top;
   }
-  &:hover {
-    opacity: .8;
+
+  &__address,
+  &__phone,
+  &__email {
+    @extend %contacts;
+    float: left;
+    margin-right: 34px;
   }
-}
 
-.contacts__address,
-.contacts__phone,
-.contacts__email {
-  @extend %contacts;
-  float: left;
-  margin-right: 34px;
-}
-
-.contacts__copy {
-  @extend %contacts;
-  float: right;
+  &__copy {
+    @extend %contacts;
+    float: right;
+  }
 }
