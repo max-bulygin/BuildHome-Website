@@ -2,9 +2,10 @@
 @import 'functions';
 @import 'mixins';
 @import 'placeholders';
-@import 'variables';
 @import 'reset';
 @import 'glyphter';
+@import '../js/plugins/slick/slick.scss';
+@import '../js/plugins/slick/slick-theme.scss';
 
 body {
   font: {
@@ -144,24 +145,45 @@ body {
 //Slider
 
 .slider {
+  position: relative;
   margin-top: 40px;
-  //height: 474px;
-  //overflow: hidden;
+}
 
-  //.slide__headline {
-  //  @include font(54px, $bold);
-  //  color: $white;
-  //  line-height: 52px;
-  //  position: absolute;
-  //  left: 36px;
-  //  bottom: 40px;
-  //}
+.slide__headline {
+  @include font(54px, $bold);
+  color: $white;
+  text-transform: uppercase;
+  line-height: 52px;
+  background: rgba(black, .7);
+  position: absolute;
+  top: 226px;
+  margin-left: 36px;
+  z-index: 10;
+  width: 308px;
+  padding: 25px;
+  white-space: pre-wrap;
+  &:first-line {
+    color: $brand-secondary;
+  }
 }
-.owl-item {
-  display: inline-block;
-  width: $content-width;
-  overflow: hidden;
+
+.slick-dots {
+
+  position: absolute;
+  bottom: 18px;
+
+  li button {
+    @include border();
+
+    background: $white;
+    border-radius: 50%;
+
+    &:before {
+      font-size: 40px;
+    }
+  }
 }
+
 //Features
 
 .features {
