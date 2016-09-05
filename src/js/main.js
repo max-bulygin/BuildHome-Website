@@ -4,22 +4,16 @@ $('.main-menu__link').on('click', function () {
         .siblings('.main-menu__link--active').removeClass($linkActive);
 
 });
+
+$('.slides').slick({
+    dots: true,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 2000
+});
 $('#stickyMenu').sticky({topSpacing: 0,
                         zIndex: 100,
                         });
-var styles = {
-    backgroundColor: '#2a2d32',
-    opacity: 0.9
-};
-
-// $('#stickyMenu').on('sticky-start', function () {
-//     $('.header').css(styles);
-// });
-$('#slides').owlCarousel({
-    items: 3,
-    singleItem: true,
-    autoPlay: true
-});
 
 $('#accordion').accordion({
     header: 'h4',
