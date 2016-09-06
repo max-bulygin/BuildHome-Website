@@ -176,10 +176,13 @@ body {
     @include border();
 
     background: $white;
-    border-radius: 50%;
 
     &:before {
-      font-size: 40px;
+      content: '';
+      width: 60%;
+      height: 60%;
+      margin: 20%;
+      background: #000;
     }
   }
 }

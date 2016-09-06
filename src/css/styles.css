@@ -493,10 +493,13 @@ body {
   bottom: 18px; }
   .slick-dots li button {
     border: 1px solid currentColor;
-    background: #fff;
-    border-radius: 50%; }
+    background: #fff; }
     .slick-dots li button:before {
-      font-size: 40px; }
+      content: '';
+      width: 60%;
+      height: 60%;
+      margin: 20%;
+      background: #000; }
 
 .features {
   padding: 70px 0 84px; }
