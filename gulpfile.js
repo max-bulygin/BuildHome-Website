@@ -14,4 +14,12 @@ gulp.task('compileSass', function () {
 gulp.task('watch', function () {
     gulp.watch('src/scss/styles.scss', ['compileSass']);
 });
+
+gulp.task('pluginFix', function () {
+    gulp.src(['src/js/plugins/slick/fonts/*.*', 'src/js/plugins/slick/*.gif'])
+        .pipe(gulp.dest('src/css'));
+});
+
 gulp.task('default', ['compileSass']);
+
+gulp.task('build', ['compileSass', 'pluginFix']);
