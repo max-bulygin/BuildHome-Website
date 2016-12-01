@@ -6,14 +6,12 @@
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Build Home - Industrial Theme</title>
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 <header class="header">
-    <div class="wrapper">
-        <div class="company-container clearfix">
+    <div class="company-container">
+        <div class="wrapper clearfix">
             <div class="logo">
                 <h1 class="logo__heading">Build Home</h1>
                 <span class="logo__sub-heading">Industrial Theme</span>
@@ -31,13 +29,15 @@
                     <span class="icon-skype"></span></a>
             </div>
         </div>
-        <div class="menu-container clearfix" id="stickyMenu">
+    </div>
+    <div class="menu-container clearfix" id="stickyMenu">
+        <div class="wrapper clearfix">
             <nav class="main-menu">
                 <a href="#" class="main-menu__link main-menu__link--active">Home</a><!--
-                --><a href="#features" class="main-menu__link">Features</a><!--
-                --><a href="#services" class="main-menu__link">Services</a><!--
-                --><a href="#blog" class="main-menu__link">News</a><!--
-                --><a href="#" class="main-menu__link">Shop</a>
+                        --><a href="#features" class="main-menu__link">Features</a><!--
+                        --><a href="#services" class="main-menu__link">Services</a><!--
+                        --><a href="#blog" class="main-menu__link">News</a><!--
+                        --><a href="#" class="main-menu__link">Shop</a>
             </nav>
             <div class="search">
                 <form action="/" method="GET">
@@ -55,15 +55,15 @@
         <div class="slides" id="slides">
             <div>
                 <h2 class="slide__headline">Build Your Business</h2>
-                <img src="img/slider-1.jpg" alt="Our Great Slider" />
+                <img src="img/slider-1.jpg" alt="Our Great Slider"/>
             </div>
             <div>
                 <h2 class="slide__headline">Build Your Business</h2>
-                <img src="img/slider-2.jpg" alt="Our Great Slider" />
+                <img src="img/slider-2.jpg" alt="Our Great Slider"/>
             </div>
             <div>
                 <h2 class="slide__headline">Build Your Business</h2>
-                <img src="img/slider-3.jpg" alt="Our Great Slider" />
+                <img src="img/slider-3.jpg" alt="Our Great Slider"/>
             </div>
         </div>
     </div>
@@ -282,6 +282,19 @@
         </div>
     </div>
 </footer>
+<script>
+    WebFontConfig = {
+        google: {
+            families: ['Ubuntu:300,400,500', 'Ubuntu Condensed',]
+        },
+        timeout: 2000
+    };
+    (function (d) {
+        var wf = d.createElement('script'), s = d.scripts[0];
+        wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js';
+        s.parentNode.insertBefore(wf, s);
+    })(document);
+</script>
 <script src="https://code.jquery.com/jquery-3.1.0.min.js"
         integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
