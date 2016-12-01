@@ -401,12 +401,13 @@ body {
       color: #248cec; }
 
 .menu-container {
-  background: #2a2d32;
   -webkit-transition: opacity 500;
   -moz-transition: opacity 500;
   -ms-transition: opacity 500;
   -o-transition: opacity 500;
   transition: opacity 500; }
+  .menu-container .wrapper {
+    background: #2a2d32; }
 
 .main-menu {
   float: left; }
@@ -465,7 +466,8 @@ body {
   .is-sticky:hover {
     opacity: 1; }
   .is-sticky .menu-container {
-    border-bottom: 1px solid #191a1d; }
+    border-bottom: 1px solid #191a1d;
+    background: #2a2d32; }
 
 .slider {
   position: relative;

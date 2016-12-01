@@ -58,8 +58,10 @@ body {
 }
 
 .menu-container {
-  background: $main-menu;
   @include transition(opacity, 500);
+  & .wrapper {
+    background: $main-menu;
+  }
 }
 
 //Main menu
@@ -139,6 +141,7 @@ body {
 
   .menu-container {
     @include border(bottom, $color: $border);
+    background: $main-menu;
   }
 }
 
